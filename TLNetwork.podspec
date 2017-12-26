@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "TLNetwork"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "基于AFNetwork 3.x封装的简单GET、POST网络请求。"
   s.description  = "1、基于AFNetwork 3.x封装的简单GET、POST网络请求。2、多文件上传"
-  s.homepage     = "http://source.magic-beans.cn/Libraries/TLNetwork"
+  s.homepage     = "https://github.com/ihomelp07/TLNetwork"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "TedLiu" => "ihomelp07@gmail.com" }
   s.platform     = :ios, "9.0"
