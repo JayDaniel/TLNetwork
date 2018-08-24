@@ -112,6 +112,7 @@
                              showHUD:(BOOL)showHUD
                          httpMedthod:(TLRequestType)httpMethod
                         successBlock:(TLResponseSuccessBlock)successBlock
+                          otherBlock:(TLResponseOtherBlock) otherBlock
                            failBlock:(TLResponseFailBlock)failBlock;
 #pragma mark --- 多图片上传接口
 /**

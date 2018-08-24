@@ -211,7 +211,8 @@ static TLNetworkStatus     networkStatus;
                              showHUD:(BOOL)showHUD
                          httpMedthod:(TLRequestType)httpMethod
                         successBlock:(TLResponseSuccessBlock)successBlock
-                           failBlock:(TLResponseFailBlock)failBlock {
+                          otherBlock:(TLResponseOtherBlock) otherBlock
+                           failBlock:(TLResponseFailBlock)failBlock{
     
     // 是否显示HUD提示器
     if (showHUD == YES) {
@@ -238,7 +239,7 @@ static TLNetworkStatus     networkStatus;
             if ([responseObject[@"api_code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
-                failBlock ? failBlock(nil) : nil;
+                otherBlock ? otherBlock(responseObject) : nil;
                 [[DSToast toastWithText:responseObject[@"api_message"]] show];
             }
             // 移除当前请求
@@ -264,7 +265,7 @@ static TLNetworkStatus     networkStatus;
             if ([responseObject[@"api_code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
-                failBlock ? failBlock(nil) : nil;
+                otherBlock ? otherBlock(responseObject) : nil;
                 [[DSToast toastWithText:responseObject[@"api_message"]] show];
             }
             // 移除当前请求
@@ -287,7 +288,7 @@ static TLNetworkStatus     networkStatus;
             if ([responseObject[@"api_code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
-                failBlock ? failBlock(nil) : nil;
+                otherBlock ? otherBlock(responseObject) : nil;
                 [[DSToast toastWithText:responseObject[@"api_message"]] show];
             }
             // 移除当前请求
@@ -310,7 +311,7 @@ static TLNetworkStatus     networkStatus;
             if ([responseObject[@"api_code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
-                failBlock ? failBlock(nil) : nil;
+                otherBlock ? otherBlock(responseObject) : nil;
                 [[DSToast toastWithText:responseObject[@"api_message"]] show];
             }
             // 移除当前请求
@@ -333,7 +334,7 @@ static TLNetworkStatus     networkStatus;
             if ([responseObject[@"api_code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
-                failBlock ? failBlock(nil) : nil;
+                otherBlock ? otherBlock(responseObject) : nil;
                 [[DSToast toastWithText:responseObject[@"api_message"]] show];
             }
             // 移除当前请求

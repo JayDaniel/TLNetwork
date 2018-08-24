@@ -23,18 +23,18 @@
 - (IBAction)actionTouchTest:(id)sender {
     
     [[TLAsiNetworkManager sharedManager] setIsVerifyHttps:YES];
-    
-    [TLAsiNetworkHandler requestWithUrl:@"https://192.168.1.49:8443/T/Holen?key=hello"
-                                 params:nil
-                                showHUD:YES httpMedthod:TLAsiNetWorkGET
-                           successBlock:^(id response) {
-                               
-        
-                               
-    } failBlock:^(NSError *error) {
-        
-        
-    }];
+//    
+//    [TLAsiNetworkHandler requestWithUrl:@"https://192.168.1.49:8443/T/Holen?key=hello"
+//                                 params:nil
+//                                showHUD:YES httpMedthod:TLAsiNetWorkGET
+//                           successBlock:^(id response) {
+//                               
+//        
+//                               
+//    } failBlock:^(NSError *error) {
+//        
+//        
+//    }];
 }
 
 

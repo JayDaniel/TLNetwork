@@ -78,13 +78,19 @@ typedef NS_ENUM(NSInteger, TLSerializerType) {
  */
 typedef NSURLSessionTask TLURLSessionTask;
 /**
- *  成功回调
+ *  接口请求成功，且状态为0
  *
  *  @param responseObj 成功后返回的数据
  */
 typedef void(^TLResponseSuccessBlock)(id responseObj);
 /**
- *  失败回调
+ *  接口请求成功，但状态不为0
+ *
+ *  @param responseObj 成功后返回的数据
+ */
+typedef void(^TLResponseOtherBlock)(id responseObj);
+/**
+ *  接口请求失败，如404，500错误
  *
  *  @param error 失败后返回的错误信息
  */
